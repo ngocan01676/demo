@@ -4,9 +4,9 @@
 # {{ $greeting }}
 @else
 @if ($level == 'error')
-# Whoops!
+# Úi, lỗi rồi!
 @else
-# Hello!
+# Chào bạn!
 @endif
 @endif
 
@@ -45,7 +45,7 @@
 @if (! empty($salutation))
 {{ $salutation }}
 @else
-Regards,<br>{{ config('app.name') }}
+Trân trọng,<br>{{ config('app.name') }}
 @endif
 
 {{-- Subcopy --}}

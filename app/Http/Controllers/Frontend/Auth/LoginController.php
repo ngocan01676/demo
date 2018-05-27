@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -25,7 +25,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+//    protected $redirectTo = '/home';
+    protected $redirectTo = '/'; // <=> http://localhost/PHP_Laravel_QHO/shop/public
 
     /**
      * Create a new controller instance.
@@ -34,6 +35,14 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
         $this->middleware('guest', ['except' => 'logout']);
+    }
+
+    // Ghi đè thằng cha nó
+    public function showLoginForm()
+    {
+        // frontend.default.login --> phân cấp thư mục ở view
+        return view('frontend.default.login');
     }
 }

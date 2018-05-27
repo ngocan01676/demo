@@ -126,8 +126,16 @@
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dollar (US)</a></li>
                         </ul>
                     </li>
-                    <li><a href="authentication.html">Register</a></li>
-                    <li><a href="authentication.html">Login</a></li>
+                    @if( ! auth()->check())
+                        <li><a href="{{ route('frontend.register') }}">Register</a></li>
+                        <li><a href="{{ route('frontend.login') }}">Login</a></li>
+                    @else
+                        <li>Chào {{ auth()->user()->name }}!</li>
+                        <li><a onclick="event.preventDefault();document.getElementById('logout-form').submit();" href="#">Đăng Xuất</a></li>
+                        <form id="logout-form" action="{{ route('frontend.logout') }}" method="post">
+                            {{ csrf_field() }}
+                        </form>
+                    @endif
                 </ul>
             </div><!-- /.col -->
         </div><!-- /.container -->

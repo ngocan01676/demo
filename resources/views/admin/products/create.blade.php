@@ -63,6 +63,7 @@
                                        placeholder="ghi số lượng vào đây" value="{{ old('quantity') }}">
                                 <span class=" help-block">{{ $errors->first('quantity') }}</span>
                             </div>
+                            @permission('upload-file')
                             {{--Hình ảnh--}}
                             <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
                                 <label for="image">Hình ảnh</label>
@@ -79,6 +80,7 @@
                                        value="{{ old('images') }}" multiple>
                                 <span class=" help-block">{{ $errors->first('images.*') }}</span>
                             </div>
+                            @endpermission
 
                             <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
                                 <label for="category_id">Chuyên mục</label>

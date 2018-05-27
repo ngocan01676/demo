@@ -44,9 +44,14 @@ Route::patch('myRoute/mnb', function () {
 */
 
 /* -------- ADMIN -------- */
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Backend'], function(){
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Backend', 'middleware' => ['checkRoles:admin,writer']], function(){
+    Auth::routes();
+
+    // http://localhost/PHP_Laravel_QHO/shop/public/admin
+    Route::get('/', 'ProductController@index')->name('default');
+
 //    User
-    Route::get('/users', 'UserController@index')->name('user.index');
+    Route::get('/users', 'UserController@index')->name('user.index');//->middleware(['checkRoles:admin,writer']);
     Route::get('/users/create', 'UserController@create')->name('user.create');
     Route::post('/users', 'UserController@store')->name('user.store');
 //Route::get('/users/{id}/xyz/{name}', 'UserController@show')->where([
@@ -82,6 +87,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Backend'], 
 
 /* -------- FRONTEND -------- */
 Route::group(['as' => 'frontend.', 'namespace' => 'Frontend'], function(){
+    Auth::routes();
+
     Route::get('/', 'HomeController@index')->name('home.index');
     Route::get('/products', 'HomeController@indexProducts')->name('home.indexProducts');
     Route::get('/products/{slug}-{id}.html', 'HomeController@show')
@@ -164,6 +171,6 @@ Route::get('test-role', function(){
 });
 
 // Không được xoá
-Auth::routes();
+//Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

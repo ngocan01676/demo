@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use App\Notifications\MyResetPassword ;
 
 /**
  * App\User
@@ -52,5 +53,10 @@ class User extends Authenticatable
 
     public function products(){
         return $this->hasMany('App\Product', 'user_id', 'id');
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new MyResetPassword($token));
     }
 }
