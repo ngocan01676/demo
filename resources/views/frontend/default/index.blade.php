@@ -64,10 +64,10 @@
                     <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 
                         <div class="item"
-                             style="background-image: url({{ asset('themes/default/assets/images/sliders/slider01.jpg') }});">
+                             style="background-image: url({{ asset('themes/default/assets/images/sliders/slider-10.jpg') }});">
                             <div class="container-fluid">
                                 <div class="caption vertical-center text-left">
-                                    <div class="big-text fadeInDown-1">
+                                    <!-- <div class="big-text fadeInDown-1">
                                         Save up to a<span class="big"><span class="sign">$</span>400</span>
                                     </div>
 
@@ -81,16 +81,16 @@
                                     </div>
                                     <div class="button-holder fadeInDown-3">
                                         <a href="single-product.html" class="big le-button ">shop now</a>
-                                    </div>
+                                    </div> -->
                                 </div><!-- /.caption -->
-                            </div><!-- /.container-fluid -->
+                            </div>
                         </div><!-- /.item -->
 
                         <div class="item"
-                             style="background-image: url({{ asset('themes/default/assets/images/sliders/slider03.jpg') }});">
+                             style="background-image: url({{ asset('themes/default/assets/images/sliders/slider-10.jpg') }});">
                             <div class="container-fluid">
                                 <div class="caption vertical-center text-left">
-                                    <div class="big-text fadeInDown-1">
+                                    <!-- <div class="big-text fadeInDown-1">
                                         Want a<span class="big"><span class="sign">$</span>200</span>Discount?
                                     </div>
 
@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="button-holder fadeInDown-3">
                                         <a href="single-product.html" class="big le-button ">shop now</a>
-                                    </div>
+                                    </div> -->
                                 </div><!-- /.caption -->
                             </div><!-- /.container-fluid -->
                         </div><!-- /.item -->
@@ -118,25 +118,25 @@
 
     <!-- ========================================= HOME BANNERS ========================================= -->
     <section id="banner-holder" class="wow fadeInUp">
-        <div class="container">
+        <div class="container" style="display:flex">
             <div class="col-xs-12 col-lg-6 no-margin banner">
-                <a href="category-grid-2.html">
-                    <div class="banner-text theblue">
+                <a href="javascript:void(0)" style="height:100%">
+                    <!-- <div class="banner-text theblue">
                         <h1>New Life</h1>
                         <span class="tagline">Introducing New Category</span>
-                    </div>
-                    <img class="banner-image" alt="" src="{{ asset('themes/default/assets/images/blank.gif') }}"
-                         data-echo="{{ asset('themes/default/assets/images/banners/banner-narrow-01.jpg') }}"/>
+                    </div> -->
+                    <img class="banner-image" style="height:100%" alt="" src="{{ asset('themes/default/assets/images/blank.gif') }}"
+                         data-echo="{{ asset('themes/default/assets/images/banners/lang-nghe-thu-cong-kim-son1.jpg') }}"/>
                 </a>
             </div>
             <div class="col-xs-12 col-lg-6 no-margin text-right banner">
-                <a href="category-grid-2.html">
-                    <div class="banner-text right">
+                <a href="javascript:void(0)" style="height:100%">
+                    <!-- <div class="banner-text right">
                         <h1>Time &amp; Style</h1>
                         <span class="tagline">Checkout new arrivals</span>
-                    </div>
-                    <img class="banner-image" alt="" src="{{ asset('themes/default/assets/images/blank.gif') }}"
-                         data-echo="{{ asset('themes/default/assets/images/banners/banner-narrow-02.jpg') }}"/>
+                    </div> -->
+                    <img class="banner-image" style="height:100%" alt="" src="{{ asset('themes/default/assets/images/blank.gif') }}"
+                         data-echo="{{ asset('themes/default/assets/images/banners/maxresdefault-min.jpg') }}"/>
                 </a>
             </div>
         </div><!-- /.container -->
@@ -550,7 +550,7 @@
     @if(count($best_sellers) >= 7)
         <section id="bestsellers" class="color-bg wow fadeInUp">
             <div class="container">
-                <h1 class="section-title">Best Sellers</h1>
+                <h1 class="section-title">Bán chạy nhất</h1>
 
                 <div class="product-grid-holder medium">
                     <div class="col-xs-12 col-md-7 no-margin">
@@ -820,7 +820,7 @@
             <div class="carousel-holder hover">
 
                 <div class="title-nav">
-                    <h2 class="h1">Recently Viewed</h2>
+                    <h2 class="h1">Sản phẩm vừa xem</h2>
                     <div class="nav-holder">
                         <a href="#prev" data-target="#owl-recently-viewed"
                            class="slider-prev btn-prev fa fa-angle-left"></a>

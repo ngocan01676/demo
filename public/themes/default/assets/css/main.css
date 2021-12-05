@@ -2221,7 +2221,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: auto;
 }
 #owl-main.height-md .item {
   height: 457px;

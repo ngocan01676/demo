@@ -13,12 +13,13 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         // tạo 1 record theo ý mình
-        User::create([
-            'name'  =>  'Henry Chung',
-            'email' =>  'chungthehao@gmail.com',
+        $user = User::create([
+            'name'  =>  'Ngoc Thien',
+            'email' =>  'ngocthienk61@gmail.com',
             'password'  =>  bcrypt('123456'),
             'remember_token' => str_random('10'),
         ]);
+        $user->roles()->sync([1,1]); // array of role ids
         factory(User::class, 50)->create();
     }
 }

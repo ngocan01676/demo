@@ -378,7 +378,7 @@
             <div class="carousel-holder hover">
 
                 <div class="title-nav">
-                    <h2 class="h1">Recently Viewed</h2>
+                    <h2 class="h1">Sản phẩm vừa xem</h2>
                     <div class="nav-holder">
                         <a href="#prev" data-target="#owl-recently-viewed"
                            class="slider-prev btn-prev fa fa-angle-left"></a>

@@ -25,146 +25,147 @@ class CategoriesTableSeeder extends Seeder
 //        factory(Category::class, 50)->create();
 
         /* Tạo cái khác, có ý nghĩa hơn */
-        //        Điện thoại - có id = 2
-        $mobile = Category::create([
-            'name' => 'Điện thoại',
-            'slug' => str_slug('Điện thoại'),
+        //        Đồ đồng cao cấp - có id = 2
+        $m = Category::create([
+            'name' => 'Đồ đồng cao cấp',
+            'slug' => str_slug('Đồ đồng cao cấp'),
             'order' => 0,
             'parent' => 0
         ]);
 
         Category::create([
-            'name' => 'Điện thoại Apple',
-            'slug' => str_slug('Điện thoại Apple'),
+            'name' => 'Đồ đồng khảm ngũ sắc',
+            'slug' => str_slug('Đồ đồng khảm ngũ sắc'),
             'order' => 0,
-            'parent' => $mobile->id
+            'parent' => $m->id
         ]);
 
         Category::create([
-            'name' => 'Điện thoại Samsung',
-            'slug' => str_slug('Điện thoại Samsung'),
+            'name' => 'Lư hương, lọ lộc bình',
+            'slug' => str_slug('Lư hương, lọ lộc bình'),
             'order' => 1,
-            'parent' => $mobile->id
+            'parent' => $m->id
         ]);
 
         Category::create([
-            'name' => 'Điện thoại HTC',
-            'slug' => str_slug('Điện thoại HTC'),
+            'name' => 'Quà tặng quân sự mạ vàng',
+            'slug' => str_slug('Quà tặng quân sự mạ vàng'),
             'order' => 2,
-            'parent' => $mobile->id
+            'parent' => $m->id
         ]);
-
-        Category::create([
-            'name' => 'Điện thoại LG',
-            'slug' => str_slug('Điện thoại LG'),
-            'order' => 3,
-            'parent' => $mobile->id
-        ]);
-
-//        Máy tính bảng - 7
-        $tablet = Category::create([
-            'name' => 'Máy tính bảng',
-            'slug' => str_slug('Máy tính bảng'),
+        //Đồ đồng phong thủy
+        $t = Category::create([
+            'name' => 'Đồ đồng phong thủy',
+            'slug' => str_slug('Đồ đồng phong thủy'),
             'order' => 1,
             'parent' => 0
         ]);
 
         Category::create([
-            'name' => 'Máy tính bảng Apple',
-            'slug' => str_slug('Máy tính bảng Apple'),
+            'name' => 'Phong thuỷ 12 con giáp',
+            'slug' => str_slug('Phong thuỷ 12 con giáp'),
             'order' => 0,
-            'parent' => $tablet->id
+            'parent' => $t->id
         ]);
 
         Category::create([
-            'name' => 'Máy tính bảng Samsung',
-            'slug' => str_slug('Máy tính bảng Samsung'),
+            'name' => 'Vật phẩm phong thuỷ',
+            'slug' => str_slug('Vật phẩm phong thuỷ'),
             'order' => 1,
-            'parent' => $tablet->id
+            'parent' => $t->id
         ]);
 
-        Category::create([
-            'name' => 'Máy tính bảng HTC',
-            'slug' => str_slug('Máy tính bảng HTC'),
-            'order' => 2,
-            'parent' => $tablet->id
-        ]);
-
-        Category::create([
-            'name' => 'Máy tính bảng LG',
-            'slug' => str_slug('Máy tính bảng LG'),
-            'order' => 3,
-            'parent' => $tablet->id
-        ]);
-
-//        Laptop - 12
-        $laptop = Category::create([
-            'name' => 'Laptop',
-            'slug' => str_slug('Laptop'),
+        // Đồ đồng quà tặng
+        $l = Category::create([
+            'name' => 'Đồ đồng quà tặng',
+            'slug' => str_slug('Đồ đồng quà tặng'),
             'order' => 2,
             'parent' => 0
         ]);
 
         Category::create([
-            'name' => 'Laptop Apple',
-            'slug' => str_slug('Laptop Apple'),
+            'name' => 'Quà tặng bằng đồng',
+            'slug' => str_slug('Quà tặng bằng đồng'),
             'order' => 0,
-            'parent' => $laptop->id
+            'parent' => $l->id
         ]);
 
         Category::create([
-            'name' => 'Laptop Samsung',
-            'slug' => str_slug('Laptop Samsung'),
+            'name' => 'Quà tặng quân sự',
+            'slug' => str_slug('Quà tặng quân sự'),
             'order' => 1,
-            'parent' => $laptop->id
+            'parent' => $l->id
         ]);
 
-        Category::create([
-            'name' => 'Laptop Sony',
-            'slug' => str_slug('Laptop Sony'),
-            'order' => 2,
-            'parent' => $laptop->id
-        ]);
-
-//        Phụ kiện - 16
-        $accessories = Category::create([
-            'name' => 'Phụ kiện',
-            'slug' => str_slug('Phụ kiện'),
+        // Đồ thờ bằng đồng
+        $ac= Category::create([
+            'name' => 'Đồ thờ bằng đồng',
+            'slug' => str_slug('Đồ thờ bằng đồng'),
             'order' => 3,
             'parent' => 0
         ]);
 
         Category::create([
-            'name' => 'Phụ kiện Apple',
-            'slug' => str_slug('Phụ kiện Apple'),
+            'name' => 'Bát hương',
+            'slug' => str_slug('Bát hương'),
             'order' => 0,
-            'parent' => $accessories->id
+            'parent' => $ac->id
         ]);
 
         Category::create([
-            'name' => 'Phụ kiện Samsung',
-            'slug' => str_slug('Phụ kiện Samsung'),
+            'name' => 'Bộ tam sự, ngũ sự',
+            'slug' => str_slug('Bộ tam sự, ngũ sự'),
             'order' => 1,
-            'parent' => $accessories->id
+            'parent' => $ac->id
         ]);
 
         Category::create([
-            'name' => 'Phụ kiện HTC',
-            'slug' => str_slug('Phụ kiện HTC'),
+            'name' => 'Chân nến đồng',
+            'slug' => str_slug('Chân nến đồng'),
             'order' => 2,
-            'parent' => $accessories->id
+            'parent' => $ac->id
         ]);
 
         Category::create([
-            'name' => 'Phụ kiện LG',
-            'slug' => str_slug('Phụ kiện LG'),
+            'name' => 'Đài thờ',
+            'slug' => str_slug('Đài thờ'),
             'order' => 3,
-            'parent' => $accessories->id
+            'parent' => $ac->id
         ]);
-        // thằng cuối cùng này có id = 21
         Category::create([
-            'name' => 'Phụ kiện Sony',
-            'slug' => str_slug('Phụ kiện Sony'),
+            'name' => 'Đèn thờ',
+            'slug' => str_slug('Đèn thờ'),
+            'order' => 3,
+            'parent' => $ac->id
+        ]);
+        Category::create([
+            'name' => 'Đỉnh đồng',
+            'slug' => str_slug('Đỉnh đồng'),
+            'order' => 3,
+            'parent' => $ac->id
+        ]);
+        Category::create([
+            'name' => 'Hạc thờ bằng đồng',
+            'slug' => str_slug('Hạc thờ bằng đồng'),
+            'order' => 3,
+            'parent' => $ac->id
+        ]);
+        Category::create([
+            'name' => 'Ống cắm hương',
+            'slug' => str_slug('Ống cắm hương'),
+            'order' => 3,
+            'parent' => $ac->id
+        ]);
+        Category::create([
+            'name' => 'Mâm bồng',
+            'slug' => str_slug('Mâm bồng'),
+            'order' => 3,
+            'parent' => $ac->id
+        ]);
+        // Tranh đồng
+        Category::create([
+            'name' => 'Tranh đồng',
+            'slug' => str_slug('Tranh đồng'),
             'order' => 4,
             'parent' => $accessories->id
         ]);
